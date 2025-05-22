@@ -134,39 +134,45 @@
 <!-- header section ends -->
 
 <!-- index section starts  -->
-
 <section class="index">
 
     <div class="image">
-        <img src="images/index-img.png" alt="example image" id="myImage">
-        <script>
-            var image = document.getElementById("myImage");
-            var counter = 1;
-            setInterval(function() {
-              if (counter % 2 == 0) {
-                image.src = "images/index-img.png";
-              } else if(counter % 3 == 0){
-                image.src = "images/7.jpg";
-                
-              }
-              else{
-                image.src = "images/8.jpg";
-              }
-            
-              counter++;
-            }, 1500);
-            </script>
+        <img src="images/7.jpg" alt="example image" id="myImage">
     </div>
 
-    <div class="content" >
-        <h3>Your <span style ="color: rgb(0, 8, 255)">C</span>ompanion to <span style ="color: blue">C</span>onquest</h3>
+    <div class="content">
+        <h3>Your <span style="color: rgb(0, 8, 255)">C</span>ompanion to <span style="color: blue">C</span>onquest</h3>
         <p>Career Catalyst, a platform where students can prepare to College placements in all kinds.</p>
-        
-
-           
-             
-            
     </div>
+
+    <script>
+        // Preload all images
+        const imageSources = [
+            "images/8.jpg",
+            "images/7.jpg",
+            "images/8.jpg"
+        ];
+
+        imageSources.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        // Start image switching
+        const image = document.getElementById("myImage");
+        let counter = 1;
+
+        setInterval(function () {
+            if (counter % 2 === 0) {
+                image.src = "images/8.jpg";
+            } else if (counter % 3 === 0) {
+                image.src = "images/7.jpg";
+            } else {
+                image.src = "images/8.jpg";
+            }
+            counter++;
+        }, 1500);
+    </script>
 
 </section>
 
