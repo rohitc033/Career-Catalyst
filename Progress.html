@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress</title>
+
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .progress-circle {
+      width: 150px;
+      height: 150px;
+      background: conic-gradient(#4caf50 calc(var(--progress) * 1%), #ddd 0);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    .progress-circle::before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress-label {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <i class="fas fa-graduation-cap"></i> Career Catalyst
+    </a>
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <nav class="navbar">
+     <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Mock</a></li>
+             <li><a href="https://aptitude-code-quest-ace.lovable.app/">Test</a>
+            
+            <li><a href="#">Resources</a>
+                <ul>
+                    <li><a href="course-1.html">Aptitude</a></li>
+                    <li><a href="course-2.html">DSA</a></li>
+                    <li><a href="course-3.html">Language</a></li>
+                    <li><a href="course-4.html">projects</a></li>
+                </ul>
+            </li>
+               
+            </li>
+            <li><a href="Progress.html">Progress</a></li>
+            <li><a href="contact.html">Team</a></li>
+             
+            
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Heading -->
+  <section class="heading">
+    <h3>Progress</h3>
+    <p><a href="index.html">Home >></a> Progress</p>
+  </section>
+
+  <!-- About / Progress Circle -->
+  <section class="about">
+    <div
+      class="progress-circle"
+      id="progress-circle"
+      style="--progress: 0;"
+    >
+      <span class="progress-label" id="progress-label">0%</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="box-container"></div>
+    <div class="credit">
+      created by <span>Team.Antimatters</span> || all rights reserved!
+    </div>
+  </section>
+
+  <!-- JavaScript to update progress -->
+  <script>
+    function updateProgress() {
+      console.log("Updating progress...");
+
+      const totalTasks = 21;
+      let completedCount = 0;
+
+      // Check for each task (task-1 to task-21)
+      for (let i = 1; i <= totalTasks; i++) {
+        const taskKey = `task-${i}`;
+        if (localStorage.getItem(taskKey) === "completed") {
+          completedCount++;
+        }
+      }
+
+      // Calculate progress percentage
+      const progressPercentage = (completedCount / totalTasks) * 100;
+      const progressCircle = document.getElementById("progress-circle");
+      const progressLabel = document.getElementById("progress-label");
+
+      // Update the progress circle and label
+      progressCircle.style.setProperty("--progress", progressPercentage);
+      progressLabel.textContent = `${Math.round(progressPercentage)}%`;
+    }
+
+    // Update progress when the page is loaded
+    window.onload = updateProgress;
+
+    // Update progress on localStorage changes across different pages or tabs
+    window.addEventListener("storage", updateProgress);
+  </script>
+
+  <!-- Your custom JS file if needed -->
+  <script src="js/script.js"></script>
+</body>
+</html>

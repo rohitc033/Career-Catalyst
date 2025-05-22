@@ -1,0 +1,44 @@
+/* Animation for sliding image */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+/* Apply sliding animation to the image */
+#animated-image {
+  animation: slide 1s ease-in-out infinite alternate;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Optional: Hover effect to reverse the animation on hover */
+#animated-image:hover {
+  animation-direction: reverse;
+}
+
+/* Optional: Adding scaling effect */
+#animated-image:active {
+  transform: scale(1.1);
+}
+
+/* Optional: Add more smoothness when the image is displayed */
+#animated-image {
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

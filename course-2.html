@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>course-2</title>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .footer .credit {
+      color: white;
+    }
+
+    .completed {
+      background-color: #d4edda !important;
+      border: 2px solid #28a745;
+    }
+
+    .done-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .done-btn.completed i {
+      color: #28a745;
+    }
+
+    .icons a {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <i class="fas fa-graduation-cap"></i> Career Catalyst
+    </a>
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Mock</a></li>
+        <li>
+          <a href="#">Resources</a>
+          <ul>
+            <li><a href="course-1.html">Aptitude</a></li>
+            <li><a href="course-2.html">DSA</a></li>
+            <li><a href="course-3.html">Language</a></li>
+            <li><a href="course-4.html">projects</a></li>
+          </ul>
+        </li>
+        <li><a href="https://aptitude-code-quest-ace.lovable.app/">Test</a></li>
+        <li><a href="Progress.html">Progress</a></li>
+        <li><a href="contact.html">Team</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Courses Section -->
+  <section class="course-2">
+    <!-- Task 7 -->
+    <div class="box" id="task-7">
+      <div class="image"><img src="images/Beginner.png" alt="Python" /></div>
+      <div class="content">
+       
+        <h3><span style="background-color: green; color: white;">Easy</span> DSA problems</h3>
+
+        <p>The level of questions in this playlist is under 500</p>
+        <div class="action-row">
+          <a href="https://www.codechef.com/practice/basic-programming-concepts" class="btn">Solve</a>
+          <span class="mark-label">Mark as Completed</span>
+          <button class="done-btn" data-task-id="task-7"><i class="far fa-circle"></i></button>
+        </div>
+       
+      </div>
+    </div>
+
+    <!-- Task 8 -->
+    <div class="box" id="task-8">
+      <div class="image"><img src="images/Beginner.png" alt="DSA" /></div>
+      <div class="content">
+          <h3><span style="background-color: orange; color: white;">Medium</span> DSA problems</h3>
+        
+        <p>The level of questions in this playlist is above 500 under 1000</p>
+        <div class="action-row">
+          <a href="https://www.codechef.com/practice/logical-problems" class="btn">Solve</a>
+          <span class="mark-label">Mark as Completed</span>
+          <button class="done-btn" data-task-id="task-8"><i class="far fa-circle"></i></button>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Task 9 -->
+    <div class="box" id="task-9">
+      <div class="image"><img src="images/Beginner.png" alt="DS" /></div>
+      <div class="content">
+          <h3><span style="background-color: red; color: white;">Hard</span> DSA problems</h3>
+        
+        <p>The level of questions is above 1000, solve at your own risk</p>
+         <div class="action-row">
+          <a href="https://www.codechef.com/practice/course/1-star-difficulty-problems/DIFF1200/problems/GROUPS" class="btn">Solve</a>
+          <span class="mark-label">Mark as Completed</span>
+          <button class="done-btn" data-task-id="task-8"><i class="far fa-circle"></i></button>
+        </div>
+        
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="box-container"></div>
+    <div class="credit">
+      Created by <span>Team.Antimatters</span> || All rights reserved!
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    window.onload = function () {
+      // Loop through each task and check if it's marked as completed
+      document.querySelectorAll(".done-btn").forEach(function (button) {
+        const taskId = button.getAttribute("data-task-id");
+        const courseBox = button.closest(".box");
+
+        // Check if the task is marked as completed in localStorage
+        if (localStorage.getItem(taskId) === "completed") {
+          courseBox.classList.add("completed");
+          button.querySelector("i").classList.add("fas", "fa-check-circle");
+          button.querySelector("i").classList.remove("far", "fa-circle");
+        }
+      });
+    };
+
+    // Add event listeners for each "mark as completed" button
+    document.querySelectorAll(".done-btn").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const taskId = button.getAttribute("data-task-id");
+        const courseBox = button.closest(".box");
+
+        // Toggle completion status
+        if (courseBox.classList.contains("completed")) {
+          courseBox.classList.remove("completed");
+          button.querySelector("i").classList.remove("fas", "fa-check-circle");
+          button.querySelector("i").classList.add("far", "fa-circle");
+          localStorage.removeItem(taskId); // Remove task completion from localStorage
+        } else {
+          courseBox.classList.add("completed");
+          button.querySelector("i").classList.add("fas", "fa-check-circle");
+          button.querySelector("i").classList.remove("far", "fa-circle");
+          localStorage.setItem(taskId, "completed"); // Mark task as completed in localStorage
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>course-3</title>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    .footer .credit {
+      color: white;
+    }
+
+    .completed {
+      background-color: #d4edda !important;
+      border: 2px solid #28a745;
+    }
+
+    .done-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .done-btn.completed i {
+      color: #28a745;
+    }
+
+    .icons a {
+      color: #555;
+    }
+
+    .course-3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .box {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    .box .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .box .content {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .box .content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .box .content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .action-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+     .icons a {
+      color: #555;
+    }
+
+    .mark-label {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 960px) {
+      .course-3 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .box {
+        width: 90%;
+      }
+    }
+
+    .footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <i class="fas fa-graduation-cap"></i> Career Catalyst
+    </a>
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Mock</a></li>
+        <li>
+          <a href="#">Resources</a>
+          <ul>
+            <li><a href="course-1.html">Aptitude</a></li>
+            <li><a href="course-2.html">DSA</a></li>
+            <li><a href="course-3.html">Language</a></li>
+            <li><a href="course-4.html">Projects</a></li>
+          </ul>
+        </li>
+        <li><a href="https://aptitude-code-quest-ace.lovable.app/">Test</a></li>
+        <li><a href="Progress.html">Progress</a></li>
+        <li><a href="contact.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Courses Section -->
+ <section class="course-3">
+  <div class="box" id="task-10">
+    <div class="image"><img src="images/CLanNew.png" alt="C Language" /></div>
+    <div class="content">
+      <h3>C Language</h3>
+      <p>Learn the fundamentals of C programming.</p>
+      <div class="action-row">
+        <a href="https://youtu.be/irqbmMNs2Bo?si=Wayrlmxg-fmDuT8a" class="btn">Learn it</a>
+        <span class="mark-label">Mark as Completed</span>
+        <button class="done-btn" data-task-id="task-10"><i class="far fa-circle"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="box" id="task-11">
+    <div class="image"><img src="images/JSNew.png" alt="Advanced JS" /></div>
+    <div class="content">
+      <h3>Advanced JavaScript</h3>
+      <p>Deep dive into advanced JavaScript concepts.</p>
+      <div class="action-row">
+        <a href="https://youtube.com/playlist..." class="btn">Learn it</a>
+        <span class="mark-label">Mark as Completed</span>
+        <button class="done-btn" data-task-id="task-11"><i class="far fa-circle"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="box" id="task-12">
+    <div class="image"><img src="images/JavaNew.png" alt="Java" /></div>
+    <div class="content">
+      <h3>Java for Beginners</h3>
+      <p>Get started with Java and learn its fundamentals.</p>
+      <div class="action-row">
+        <a href="https://youtu.be/A74TOX803D0?si=..." class="btn">Learn it</a>
+        <span class="mark-label">Mark as Completed</span>
+        <button class="done-btn" data-task-id="task-12"><i class="far fa-circle"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="box" id="task-13">
+    <div class="image"><img src="images/PyNew.png" alt="Python" /></div>
+    <div class="content">
+      <h3>Python Language</h3>
+      <p>Understand how to use Python for development.</p>
+      <div class="action-row">
+        <a href="https://youtu.be/_uQrJ0TkZlc" class="btn">Learn it</a>
+        <span class="mark-label">Mark as Completed</span>
+        <button class="done-btn" data-task-id="task-13"><i class="far fa-circle"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="box" id="task-14">
+    <div class="image"><img src="images/CPPNew.png" alt="C++" /></div>
+    <div class="content">
+      <h3>C++ Language</h3>
+      <p>Learn C++ for development.</p>
+      <div class="action-row">
+        <a href="https://youtube.com/playlist..." class="btn">Learn it</a>
+        <span class="mark-label">Mark as Completed</span>
+        <button class="done-btn" data-task-id="task-14"><i class="far fa-circle"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="box" id="task-15">
+    <div class="image"><img src="images/SQLNew.png" alt="SQL" /></div>
+    <div class="content">
+      <h3>SQL Language</h3>
+      <p>Learn SQL for database operations.</p>
+      <div class="action-row">
+        <a href="https://youtu.be/hlGoQC332VM" class="btn">Learn it</a>
+        <span class="mark-label">Mark as Completed</span>
+        <button class="done-btn" data-task-id="task-15"><i class="far fa-circle"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="credit">
+      Created by <span>Team.Antimatters</span> || All rights reserved!
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Reflect completed tasks on load
+    window.addEventListener("load", () => {
+      document.querySelectorAll(".done-btn").forEach(button => {
+        const taskId = button.dataset.taskId;
+        const box = document.getElementById(taskId);
+        const icon = button.querySelector("i");
+
+        if (localStorage.getItem(taskId) === "completed") {
+          box.classList.add("completed");
+          icon.classList.remove("far", "fa-circle");
+          icon.classList.add("fas", "fa-check-circle");
+        }
+      });
+    });
+
+    // Toggle completion on click
+    document.querySelectorAll(".done-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const taskId = button.dataset.taskId;
+        const box = document.getElementById(taskId);
+        const icon = button.querySelector("i");
+
+        const isCompleted = box.classList.toggle("completed");
+
+        if (isCompleted) {
+          localStorage.setItem(taskId, "completed");
+          icon.classList.remove("far", "fa-circle");
+          icon.classList.add("fas", "fa-check-circle");
+        } else {
+          localStorage.removeItem(taskId);
+          icon.classList.remove("fas", "fa-check-circle");
+          icon.classList.add("far", "fa-circle");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

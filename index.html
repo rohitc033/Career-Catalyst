@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+<style>
+   .btn {
+  --btn-gradient: var(--btn-gradient-from),var(--btn-gradient-to);
+  border: 0 none;
+  appearance: none;
+  transition: all .3s;
+  border-radius: 10px;
+  background-color: var(--btn-bg);
+  box-shadow: 0 0 2px 2px var(--btn-shadow), 0 0 4px 4px var(--btn-shadow), 0 0 8px 8px var(--btn-shadow);
+}
+
+.btn,
+.btn * {
+  box-sizing: border-box;
+}
+
+.btn-inner {
+  position: relative;
+  border-radius: inherit;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  min-width: 10rem;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  color: var(--btn-text-color);
+}
+
+.btn-label {
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  border-radius: inherit;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btn-bg);
+  background-image: linear-gradient(to bottom,var(--btn-gradient));
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  letter-spacing: 3px;
+  box-shadow: rgba(0, 131, 253, 0.596) 0px 1px 80px 40px;
+}
+
+.btn:active {
+  border-radius: 40px;
+  transform: translateY(4px);
+  transition: 0.1s;
+  letter-spacing: 3px;
+  box-shadow: rgb(238, 235, 3) 0px 1px 80px 40px;
+}
+
+.btn:active .btn-blur:before {
+  --transition: 0.5s;
+}
+
+.btn--primary {
+  --btn-bg: #111111;
+  --btn-gradient-from: #111111;
+  --btn-gradient-to: rgba(29, 6, 240, 0.5);
+  --btn-text-color: #d7c60b;
+  --btn-shadow: #9b14c438;
+}
+
+@keyframes turn {
+  0% {
+    transform: translateY(-50%) rotate(0deg)
+  }
+
+  to {
+    transform: translateY(-50%) rotate(1turn)
+  }
+}
+.footer .credit{
+  color: white;
+}
+
+</style>
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="index.html" class="logo"> <i class="fas fa-graduation-cap"></i> Career catalyst </a>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Mock</a></li>
+             <li><a href="https://aptitude-code-quest-ace.lovable.app/">Test</a>
+            
+            <li><a href="#">Resources</a>
+                <ul>
+                    <li><a href="course-1.html">Aptitude</a></li>
+                    <li><a href="course-2.html">DSA</a></li>
+                    <li><a href="course-3.html">Language</a></li>
+                    <li><a href="course-4.html">projects</a></li>
+                </ul>
+            </li>
+               
+            </li>
+            <li><a href="Progress.html">Progress</a></li>
+            <li><a href="contact.html">Team</a></li>
+             
+            
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- index section starts  -->
+
+<section class="index">
+
+    <div class="image">
+        <img src="images/index-img.png" alt="example image" id="myImage">
+        <script>
+            var image = document.getElementById("myImage");
+            var counter = 1;
+            setInterval(function() {
+              if (counter % 2 == 0) {
+                image.src = "images/index-img.png";
+              } else if(counter % 3 == 0){
+                image.src = "images/7.jpg";
+                
+              }
+              else{
+                image.src = "images/8.jpg";
+              }
+            
+              counter++;
+            }, 1500);
+            </script>
+    </div>
+
+    <div class="content" >
+        <h3>Your <span style ="color: rgb(0, 8, 255)">C</span>ompanion to <span style ="color: blue">C</span>onquest</h3>
+        <p>Career Catalyst, a platform where students can prepare to College placements in all kinds.</p>
+        
+
+           
+             
+            
+    </div>
+
+</section>
+
+<!-- index section ends -->
+
+<!-- categories section starts  -->
+
+<section class="category">
+
+    <a href="" class="box">
+        <img src="images/category-1.png" alt="">
+        <h3>APITITUDE</h3>
+    </a>
+
+    <a href="" class="box">
+      <img src="images/category-2.png" alt="">
+      <h3>DSA </h3>
+  </a>
+
+    <a href="" class="box">
+        <img src="images/category-3.png" alt="">
+        <h3>Language</h3>
+    </a>
+
+    <a href="" class="box">
+        <img src="images/category-4.png" alt="">
+        <h3>Projects</h3>
+    </a>
+
+    <a href="" class="box">
+        <img src="images/category-5.png" alt="">
+        <h3>Mock interview</h3>
+    </a>
+
+</section>
+
+<!-- categories section ends -->
+
+<section class="about">
+
+ <div class="image">
+  <video id="animated-image" autoplay loop playsinline controls>
+    <source src="images/Vid.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<div class="content" style="text-transform: none;">
+  <h3 style="text-transform: capitalize;">Practice interview</h3>
+  <p style="text-transform: none;">
+    Practice your speaking ability like never before, click on try it.<br>
+    Click on try it to start working on your skills.
+  </p>
+  <a href="https://code-interview-genius.lovable.app/interview" class="btn">
+    <span class="box">
+                Try it
+            </span>
+  </a>
+</div>
+
+</section>
+
+<section class="about">
+  <div class="content" style="text-transform: none;">
+  <h3 style="text-transform: capitalize;">Practice Aptitude</h3>
+  <p style="text-transform: none;">
+    Practice your Aptitude  ability like never before, click on try it.<br>
+    Click on try it to start working on your skills.
+  </p>
+  <a href="https://aptitude-code-quest-ace.lovable.app/" class="btn">
+    
+       <span class="box">
+                Try it
+            </span>
+   
+  </a>
+</div>
+
+  <div class="image">
+    <img src="images/about-img.png"alt="example image" id="animated-image">
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+       
+       
+           
+    </div>
+
+    <div  class="credit"> created by  <span>Team.Antimatters</span> || All Rights Reserved! </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<style>
+    @keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+#animated-image {
+  animation: slide 1s ease-in-out infinite alternate;
+}
+.box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+.footer .credit{
+  color: white;
+}
+</style>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="index.html" class="logo"> <i class="fas fa-graduation-cap"></i> Career catalyst</a>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Mock</a></li>
+             <li><a href="https://aptitude-code-quest-ace.lovable.app/">Test</a>
+            
+            <li><a href="#">Resources</a>
+                <ul>
+                    <li><a href="course-1.html">Aptitude</a></li>
+                    <li><a href="course-2.html">DSA</a></li>
+                    <li><a href="course-3.html">Language</a></li>
+                    <li><a href="course-4.html">projects</a></li>
+                </ul>
+            </li>
+               
+            </li>
+            <li><a href="Progress.html">Progress</a></li>
+            <li><a href="contact.html">Team</a></li>
+             
+            
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<section class="heading">
+    <h3>Mock</h3>
+    <p> <a href="index.html">Home >></a> Mock </p>
+</section>
+
+<!-- about section starts  -->
+
+<section class="about">
+
+  <div class="image">
+  <video id="animated-image" autoplay loop playsinline controls>
+    <source src="images/Vid.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+    <div class="content"texttransform: none;>
+        <h3>we will stay with you until you success in your career.</h3>
+         <p style="text-transform: none;">
+    Practice your speaking ability like never before, click on try it.<br>
+    Click on try it to start working on your skills.
+  </p>
+        <a href="https://code-interview-genius.lovable.app/interview"  class="btn"> <button>
+            <span class="box">
+                Try it
+            </span>
+        </button></a>
+        
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+       
+        
+
+       
+
+
+    </div>
+    
+
+    <div class="credit"> created by <span>Team.Antimatterse </span> || all rights reserved! </div>
+
+</section>
+
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
